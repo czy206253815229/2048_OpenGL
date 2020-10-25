@@ -24,8 +24,10 @@ void keyEvent(int key, int x, int y)
 	case GLUT_KEY_RIGHT:flag = operate_RIGHT(); break;
 	}
 
-	if (flag)
+	if (flag) {
+		nextStep();
 		glutPostRedisplay();
+	}
 }
 
 
@@ -62,6 +64,7 @@ int main(int argc, char** argv)
 	glEnable(GL_TEXTURE_2D);
 	Init();
 	glutSpecialFunc(&keyEvent);  //注册键盘事件
+	nextStep();
 	glutMainLoop();  //启动消息循环后程序运行起来
 	glDisable(GL_TEXTURE_2D);
 	

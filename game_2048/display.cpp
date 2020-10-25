@@ -78,9 +78,7 @@ void reprint()
 {
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
-	nextStep();
 	system("cls");
 	display();
 	glFlush();
-
 }
